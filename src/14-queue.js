@@ -25,11 +25,11 @@ class Queue {
   enqueue(element) {
     const node = new ListNode(element);
 
-    if (this.head) {
-      this.tail.next = node;
+    if (!this.head) {
+      this.head = node;
       this.tail = node;
     } else {
-      this.head = node;
+      this.tail.next = node;
       this.tail = node;
     }
     this.length++;

@@ -22,13 +22,14 @@ function findIndex(array, value) {
     if (array[middle] === value) {
       found = true;
       position = middle;
-    } else if (array[middle] < value) {
-      last = middle + 1;
+    } else if (array[middle] > value) {
+      last = middle - 1;
     } else {
-      first = middle - 1;
+      first = middle + 1;
     }
   }
   return position;
+  // throw new Error('Not implemented');
 }
 
 module.exports = findIndex;

@@ -12,9 +12,9 @@
 function deleteDigit(n) {
   const num = n.toString().split('');
   const min = Math.min(...num).toString();
-  const index = num.indexOf(min) + 1;
-  const result = num.splice(index).join('');
-  return result;
+  const index = num.indexOf(min);
+  num.splice(index, 1);
+  return +num.join('');
 }
 
 module.exports = deleteDigit;

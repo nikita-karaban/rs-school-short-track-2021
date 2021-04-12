@@ -17,7 +17,7 @@ function getCommonCharacterCount(s1, s2) {
   while (str1.length && str2.length) {
     if (str2.includes(str1.charAt(0))) {
       result++;
-      str2 = str2.slice(1);
+      str2 = str2.replace(str1.charAt(0), '');
       str1 = str1.slice(1);
     } else {
       str1 = str1.slice(1);
